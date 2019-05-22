@@ -1,5 +1,4 @@
-export interface Weather{
+export interface Weather {
     time: number;
     temperature: number;
-    
 }

@@ -16,20 +16,17 @@ export class BodyComponent implements OnInit {
   constructor(private restService: RestService) { }
 
   ngOnInit() {
-    this.restService.findAll().subscribe((data) =>{
+    this.restService.findAll().subscribe((data) => {
       this.meteoSwissData = data;
-    })
+    });
     this.plz = 8820;
   }
 
-  onSubmit(){
-    let stringPlz = this.plz.toString()
+  onSubmit() {
+    const stringPlz = this.plz.toString();
     this.meteoSwissData = undefined;
-    this.restService.find(stringPlz).subscribe((data) =>{
+    this.restService.find(stringPlz).subscribe((data) => {
       this.meteoSwissData = data;
-    })
+    });
   }
-
-  
-
 }
