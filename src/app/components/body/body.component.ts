@@ -12,12 +12,13 @@ export class BodyComponent implements OnInit {
 
   meteoSwissData: MeteoSwissData;
 
-  constructor(private route: ActivatedRoute, private router: Router, private restService: RestService) { }
+  constructor(private restService: RestService) { }
 
   ngOnInit() {
-    this.restService.findAll().subscribe(data =>{
+    this.restService.findAll().subscribe((data) =>{
       this.meteoSwissData = data;
     })
   }
+  
 
 }

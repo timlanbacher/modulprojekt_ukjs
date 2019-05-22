@@ -15,9 +15,6 @@ export class RestService {
   }
 
   public findAll(): Observable<MeteoSwissData> {
-    this.http.get<MeteoSwissData>(this.weatherUrl).subscribe((data) => {
-      console.log(data)
-    });
     return this.http.get<MeteoSwissData>(this.weatherUrl);
   }
 

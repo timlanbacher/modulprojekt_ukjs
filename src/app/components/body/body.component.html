@@ -8,7 +8,7 @@
     </form>
     <div class="content">
         <h2>Wädenswil</h2>
-        <p>{{ meteoSwissData.weather.temperature }}</p>
+        <p *ngIf="meteoSwissData != undefined">{{ meteoSwissData.weather.temperature }}</p>
     </div>
   </div>
 
