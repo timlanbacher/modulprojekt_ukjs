@@ -19,7 +19,7 @@ export class RestService {
   }
 
   public find(plz: string): Observable<MeteoSwissData> {
-    return this.http.get<MeteoSwissData>(this.weatherUrl + plz)
+    return this.http.get<MeteoSwissData>(this.weatherUrl + plz + "00")
   }
 
 

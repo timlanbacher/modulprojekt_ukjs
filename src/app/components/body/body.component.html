@@ -2,13 +2,13 @@
 
   <div class="container">
       
-    <form>
-        <h1 class="title">Wetter</h1>
-      <input type="text" ng-model="search" placeholder="Gib deine Postleitzahl ein" />
-      <button type="button">Search</button>
+    <form (submit)="onSubmit()">
+      <h1 class="title">Wetter</h1>
+      <input type="number" [(ngModel)]="plz" placeholder="Gib deine Postleitzahl ein" name="plz"/>
+      <button type="submit">Search</button>
     </form>
     <div class="content" *ngIf="meteoSwissData != undefined">
-        <h2 class="centerText city">Hier das aktuelle Wetter für 8820</h2>
+        <h2 class="centerText city">Hier das aktuelle Wetter für {{ plz }}</h2>
         <!-- <p class="description centerText">Gemessen um {{ meteoSwissData.currentWeather.time }}</p> -->
         <p class="temperature centerText">{{ meteoSwissData.currentWeather.temperature }}°C</p>
         <div class="border"></div>
@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="content" *ngIf="meteoSwissData == undefined">
-      Leider wurden für diese Suche keine Einträge gefunden. Bitte versuche es erneut.
+      <p class="centerText">Leider wurden für diese Suche keine Einträge gefunden. Bitte versuche es erneut.</p>
     </div>
   </div>
 
