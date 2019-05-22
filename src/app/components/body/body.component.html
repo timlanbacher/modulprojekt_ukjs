@@ -2,7 +2,7 @@
 
   <div class="container">
       
-    <form (submit)="onSubmit()">
+    <form (submit)="onSubmit()" ngNativeValidate>
       <h1 class="title">Wetter</h1>
       <input type="number" [(ngModel)]="plz" placeholder="Gib deine Postleitzahl ein" name="plz" required/>
       <button type="submit">Search</button>
