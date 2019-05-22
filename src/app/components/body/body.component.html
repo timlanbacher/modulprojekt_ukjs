@@ -3,12 +3,26 @@
   <div class="container">
       
     <form>
-        <h1>Wetter</h1>
-      <input type="text" ng-model="search" placeholder="Gib deine Stadt ein" />
+        <h1 class="title">Wetter</h1>
+      <input type="text" ng-model="search" placeholder="Gib deine Postleitzahl ein" />
+      <button type="button">Search</button>
     </form>
-    <div class="content">
-        <h2>Wädenswil</h2>
-        <p *ngIf="meteoSwissData != undefined">{{ meteoSwissData.weather.temperature }}</p>
+    <div class="content" *ngIf="meteoSwissData != undefined">
+        <h2 class="centerText city">Hier das aktuelle Wetter für 8820</h2>
+        <!-- <p class="description centerText">Gemessen um {{ meteoSwissData.currentWeather.time }}</p> -->
+        <p class="temperature centerText">{{ meteoSwissData.currentWeather.temperature }}°C</p>
+        <div class="border"></div>
+        <div class="forecast">
+          <div class="forecastElement" *ngFor="let singleForecast of meteoSwissData.forecast">
+            <p class="centerText">{{ singleForecast.dayDate }}</p><br>
+            <p class="forecastText">{{ singleForecast.temperatureMin }}°C</p>
+            <p class="forecastText"> bis </p>
+            <p class="forecastText">{{ singleForecast.temperatureMax }}°C</p>
+          </div>
+        </div>
+    </div>
+    <div class="content" *ngIf="meteoSwissData == undefined">
+      Leider wurden für diese Suche keine Einträge gefunden. Bitte versuche es erneut.
     </div>
   </div>
 

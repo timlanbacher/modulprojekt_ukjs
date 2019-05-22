@@ -4,17 +4,66 @@
   padding-top: 50px;
 }
 
-h1{
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 0;
+.title{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
-.content{
-    height: auto;
-    width: 800px;
-    margin: 0 100px;
-    background-color: green;
+.city{
+  font-size: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: black;
+}
+
+.forecast {
+  text-align: center;
+  .forecastText {
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+  }
+
+  .forecastElement {
+    height: 110px;
+    width: 15%;
+    background-color: lightblue;
+    border: 1px solid gray;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+.centerText{
+  text-align: center;
+
+}
+
+.temperature {
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+
+.border {
+  height: 0px;
+  margin: 20px 100px;
+  border: 1px solid black;
+}
+
+.content {
+  height: auto;
+  width: 800px;
+  margin: 20px 100px;
 }
 
 .container {
@@ -32,11 +81,20 @@ input {
   -moz-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.34);
   box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.34);
   padding: 10px;
-  margin: 20px 100px 20px;
-  width: 800px;
+  margin: 20px 5px 20px 100px;
+  width: 700px;
+}
+button{
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.34);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.34);
+  box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.34);
+  padding: 10px;
+  margin: 5px;
 }
 
 form {
   padding: 10px;
 }
-

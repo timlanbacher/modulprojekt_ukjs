@@ -19,6 +19,7 @@ export class BodyComponent implements OnInit {
       this.meteoSwissData = data;
     })
   }
+
   
 
 }
