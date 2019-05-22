@@ -4,7 +4,7 @@
       
     <form (submit)="onSubmit()">
       <h1 class="title">Wetter</h1>
-      <input type="number" [(ngModel)]="plz" placeholder="Gib deine Postleitzahl ein" name="plz"/>
+      <input type="number" [(ngModel)]="plz" placeholder="Gib deine Postleitzahl ein" name="plz" required/>
       <button type="submit">Search</button>
     </form>
     <div class="content" *ngIf="meteoSwissData != undefined">
@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="content" *ngIf="meteoSwissData == undefined">
-      <p class="centerText">Leider wurden für diese Suche keine Einträge gefunden. Bitte versuche es erneut.</p>
+      <p class="centerText">Leider wurden für diese Suche keine Einträge gefunden. Bitte versuche eine andere Postleitzahl.</p>
     </div>
   </div>
 
